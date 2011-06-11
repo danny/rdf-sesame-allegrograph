@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
 #require 'rdf/sesame'
-require "rdf-sesame-allegrograph"
+require "rdf-sesame-allegrograph.rb"
 
 Gem::Specification.new do |s|
   s.name        = "rdf-sesame-allegrograph"
