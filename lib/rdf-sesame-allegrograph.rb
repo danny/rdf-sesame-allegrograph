@@ -1,9 +1,10 @@
 require 'rdf'
-require 'rdf/sesame'
+#require 'rdf/sesame'
 require 'rdf/ntriples'
 require 'spira'
 require 'json'
 require 'uuid'
+require 'rdf/sesame'
 
 module  RDF::Sesame::Allegrograph
 # Your code goes here...

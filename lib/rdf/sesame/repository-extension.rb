@@ -1,4 +1,4 @@
-require 'rdf/ntriples'
+#require 'rdf/ntriples'
 
 module RDF::Sesame
   class Repository 
