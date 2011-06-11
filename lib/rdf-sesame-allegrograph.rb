@@ -1,5 +1,5 @@
 require 'rdf'
-#require 'rdf/sesame'
+require 'rdf/sesame'
 require 'rdf/ntriples'
 require 'spira'
 require 'json'
