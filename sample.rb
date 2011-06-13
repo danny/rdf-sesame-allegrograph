@@ -14,7 +14,7 @@ server = RDF::Sesame::Server.new(url, {:user=> 'super', :pass => 'super', :proxy
 repo = server.repositories['test']
 repo.initializeSpatialRepository
 
-Spira.add_repository! :default, repo
+Spira.add_repository! :profilemanager, repo
 
 module RDF
   class HAK < Vocabulary("http://www.mitre.org/sed3/allegro/ontology#")
@@ -38,7 +38,8 @@ end
 class Device
   include Spira::Resource
   type RDF::HAK.device
-  base_uri :default
+  base_uri :profilemanager
+  default_source :profilemanager
 
   property :name, :predicate => FOAF.name, :type => String
 end
@@ -46,7 +47,9 @@ end
 class Person
   include Spira::Resource
   type RDF::HAK.person
-  base_uri :default
+  base_uri :profilemanager
+  default_source :profilemanager
+
 
   property :name, :predicate => FOAF.name, :type => String
   property :description, :predicate => FOAF.description, :type => String
@@ -59,7 +62,8 @@ end
 class DataFeed
   include Spira::Resource
   type RDF::HAK.datafeed
-  base_uri :default
+  default_source :profilemanager
+  base_uri :profilemanager
 
   property :name, :predicate => HAK.feedname, :type => String
   property :area, :predicate => HAK.area, :type => :'RDF::Allegrograph::Polygon'
@@ -109,6 +113,5 @@ gets
 #Call private method to empty the database
 repo.send :clear_statements
 puts 'Done, Repo Empty? ' +repo.empty?.to_s
-
 
 
