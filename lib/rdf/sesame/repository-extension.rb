@@ -1,5 +1,3 @@
-#require 'rdf/ntriples'
-
 module RDF::Sesame
   class Repository 
 
@@ -64,7 +62,7 @@ module RDF::Sesame
               json = ::JSON.parse(response.body)
            end
           else
-            raise RuntimeError, "Error Sparql Query #{polyname}"
+            raise RuntimeError, "Error Sparql Query"
         end
       end
       json
