@@ -4,12 +4,11 @@ module RDF::Allegrograph
     #Review Section Below Where SPIRA Methods are overriden
     include Spira::Resource #need to include this, since classize_resource checks the inheritance chain
     type RDF::ALLEGRO.polygon
-    #default_source :geo
+    default_source :profilemanager
     #base_uri :geo
                   #RDF::URI
     attr_accessor  :points
   
-
     #TODO validation? must have 3 points?
 
     def self.fromURI uri
@@ -42,6 +41,10 @@ module RDF::Allegrograph
       self.class.repository_or_fail.insidePoly self, predicate 
     end
 
+    def to_s
+      points.to_s
+    end
+    
     ##############################
     #                            #
     # SPIRA OVERIDE FOR ALLEGRO  #
