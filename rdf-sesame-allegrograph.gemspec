@@ -5,7 +5,7 @@ $:.push File.expand_path("../lib", __FILE__)
 #
 Gem::Specification.new do |s|
   s.name        = "rdf-sesame-allegrograph"
-  s.version     = '0.0.3' #RDF::Sesame::Allegrograph::VERSION
+  s.version     = '0.0.4' #RDF::Sesame::Allegrograph::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Danny Gagne"]
   s.email       = ["danny+rdf-sesame-allegro@dannygagne.com"]
