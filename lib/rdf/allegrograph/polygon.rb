@@ -7,7 +7,7 @@ module RDF::Allegrograph
     default_source :profilemanager
     #base_uri :geo
                   #RDF::URI
-    attr_accessor  :points
+    attr_accessor  :points, :latlon_point_string
   
     #TODO validation? must have 3 points?
 
@@ -42,7 +42,7 @@ module RDF::Allegrograph
     end
 
     def to_s
-      points.to_s
+      
     end
     
     ##############################
